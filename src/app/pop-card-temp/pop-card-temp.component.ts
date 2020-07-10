@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { peopleList } from '../db-data';
+import {People} from '../people';
 
 @Component({
   selector: 'app-pop-card-temp',
@@ -7,12 +9,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PopCardTempComponent implements OnInit {
 
-  thisDudeInfo = {
-    sn : 'test',
-    givenName : 'dude',
-    mail : 'bgDu31@wanadoo.fr',
-    room : 'W999',
-  };
+  @Input()
+  people: People;
 
   constructor() { }
 

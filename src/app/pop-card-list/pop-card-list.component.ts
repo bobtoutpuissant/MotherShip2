@@ -1,5 +1,6 @@
 import { Component, OnInit, EventEmitter } from '@angular/core';
 import { GetCardInfoService } from '../get-card-info.service';
+import { peopleList } from '../db-data';
 
 @Component({
   selector: 'app-pop-card-list',
@@ -8,13 +9,11 @@ import { GetCardInfoService } from '../get-card-info.service';
 })
 export class PopCardListComponent implements OnInit {
 
+  peopleList = peopleList;
+
   constructor() { }
 
   ngOnInit(): void {
-  }
-
-  listenTo(any: EventEmitter) {
-
   }
 
 }

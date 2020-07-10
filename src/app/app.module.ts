@@ -13,6 +13,7 @@ import { MatSliderModule } from '@angular/material/slider';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { SearchPipe } from './search.pipe';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { MatInputModule } from '@angular/material/input';
     PopCardListComponent,
     MapCompComponent,
     SrcBarComponent,
-    AppContComponent
+    AppContComponent,
+    SearchPipe
   ],
   imports: [
     BrowserModule,

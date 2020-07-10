@@ -10,6 +10,6 @@ export class AppContComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-  }
 
+  }
 }
