@@ -15,6 +15,10 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { SearchPipe } from './search.pipe';
 
+import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
+import { PERFECT_SCROLLBAR_CONFIG } from 'ngx-perfect-scrollbar';
+import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,9 +37,15 @@ import { SearchPipe } from './search.pipe';
     MatFormFieldModule,
     MatInputModule,
     HttpClientModule,
+    PerfectScrollbarModule,
 
   ],
-  providers: [],
+  providers: [
+    {
+      provide: PERFECT_SCROLLBAR_CONFIG,
+      useValue: PERFECT_SCROLLBAR_CONFIG,
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

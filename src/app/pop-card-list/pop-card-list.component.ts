@@ -1,6 +1,8 @@
 import { Component, OnInit, EventEmitter } from '@angular/core';
 import { GetCardInfoService } from '../get-card-info.service';
 import { peopleList } from '../db-data';
+import { SearchPipe } from '../search.pipe';
+
 
 @Component({
   selector: 'app-pop-card-list',
