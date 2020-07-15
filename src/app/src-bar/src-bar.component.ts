@@ -1,6 +1,7 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { GetCardInfoService } from '../get-card-info.service';
 import { HttpClientModule } from '@angular/common/http';
+import SearchService from '../../services/search.service';
 
 @Component({
   selector: 'app-src-bar',
@@ -12,14 +13,14 @@ export class SrcBarComponent implements OnInit {
 
   peopleData: any[] = [];
 
-  constructor(private card: GetCardInfoService) { }
+  constructor(
+    private card: GetCardInfoService,
+    public searchService: SearchService
+  ) { }
 
   ngOnInit(): void {
   }
 
-  onKey (thisRoomOrPeople: string) {
-    console.log('onKey from searchBar working');
-  }
 
   // (): object {
   //   return this.card.getPeopleData().subscribe(data => {

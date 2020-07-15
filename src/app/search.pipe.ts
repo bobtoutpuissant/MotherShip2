@@ -1,30 +1,30 @@
 import { Pipe, PipeTransform } from '@angular/core';
+import SearchService from 'src/services/search.service';
 
 @Pipe({
   name: 'search'
 })
 export class SearchPipe implements PipeTransform {
 
-  /**
-   * Transform
-   *
-   * @param {any[]} items
-   * @param {string} mainSearchBar
-   * @returns {any[]}
-   */
-  transform(items: any[], mainSearchBar: string): any[] {
+  constructor(
+    public searchService: SearchService
+  ) {}
+
+  transform(items: any[]): any[] {
     console.log('searchfilter working');
 
     if (!items) {
       return [];
     }
-    if (!mainSearchBar) {
+
+    if (!this.searchService.mainSearchBar) {
       return items;
     }
-    mainSearchBar = mainSearchBar.toLocaleLowerCase();
+
+    const mainSearchBar = this.searchService.mainSearchBar.toLowerCase();
 
     return items.filter(it => {
-      return it.toLocaleLowerCase().includes(mainSearchBar);
+      return JSON.stringify(it).toLowerCase().match(mainSearchBar);
     });
   }
 

@@ -18,6 +18,8 @@ import { SearchPipe } from './search.pipe';
 import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
 import { PERFECT_SCROLLBAR_CONFIG } from 'ngx-perfect-scrollbar';
 import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
+import { FormsModule } from '@angular/forms';
+import SearchService from '../services/search.service';
 
 @NgModule({
   declarations: [
@@ -31,6 +33,7 @@ import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     BrowserAnimationsModule,
     MatSliderModule,
     MatToolbarModule,
@@ -44,7 +47,8 @@ import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
     {
       provide: PERFECT_SCROLLBAR_CONFIG,
       useValue: PERFECT_SCROLLBAR_CONFIG,
-    }
+    },
+    SearchService
   ],
   bootstrap: [AppComponent]
 })

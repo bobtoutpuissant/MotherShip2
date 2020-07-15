@@ -1,5 +1,5 @@
 <perfect-scrollbar style="max-width: 600px; max-height: 600px;" [config]="">
-    <div class="card mb-3" *ngFor='let people of peopleList | search: mainSearchBar'>
+    <div class="card mb-3" *ngFor='let people of peopleList | search: searchService.mainSearchBar'>
         <div class="card-header">
             <b>{{people.givenName}} {{people.sn}}</b>
         </div>
