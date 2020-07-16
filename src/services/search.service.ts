@@ -5,6 +5,6 @@ import { Injectable } from '@angular/core';
 })
 export default class SearchService {
 
-  public mainSearchBar: string;
+  public mainSearchBar = '';
 
 }
