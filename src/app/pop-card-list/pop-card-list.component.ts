@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { peopleList } from '../db-data';
 import SearchService from 'src/services/search.service';
 import { HttpClient } from '@angular/common/http';
-
 
 @Component({
   selector: 'app-pop-card-list',
