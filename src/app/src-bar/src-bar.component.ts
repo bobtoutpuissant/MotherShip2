@@ -1,6 +1,5 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { GetCardInfoService } from '../get-card-info.service';
-import { HttpClientModule } from '@angular/common/http';
 import SearchService from '../../services/search.service';
 
 @Component({

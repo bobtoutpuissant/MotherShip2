@@ -17,11 +17,15 @@ export class SearchPipe implements PipeTransform {
       return [];
     }
 
+    const mainSearchBar = this.searchService.mainSearchBar.toLowerCase();
+
+    if (mainSearchBar.length < 2) {
+      return [];
+    }
+
     if (!this.searchService.mainSearchBar) {
       return items;
     }
-
-    const mainSearchBar = this.searchService.mainSearchBar.toLowerCase();
 
     return items.filter(it => {
       return JSON.stringify(it).toLowerCase().match(mainSearchBar);
