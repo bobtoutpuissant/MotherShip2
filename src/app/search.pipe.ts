@@ -18,6 +18,10 @@ export class SearchPipe implements PipeTransform {
 
     const mainSearchBar = this.searchService.mainSearchBar.toLowerCase();
 
+    if (mainSearchBar.length < 2) {
+      return [];
+    }
+
     if (!this.searchService.mainSearchBar) {
       return items;
     }
