@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import SearchService from 'src/services/search.service';
 import { HttpClient } from '@angular/common/http';
+import { AsyncPipe } from '@angular/common';
 
 @Component({
   selector: 'app-pop-card-list',
