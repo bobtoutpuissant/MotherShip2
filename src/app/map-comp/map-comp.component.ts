@@ -12,8 +12,6 @@ import {SearchPipe} from '../search.pipe';
 })
 export class MapCompComponent implements OnInit {
 
-  peopleData: any[] = [];
-
   constructor(
     public searchService: SearchService,
     private card: GetCardInfoService,
