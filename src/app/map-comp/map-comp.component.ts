@@ -12,8 +12,6 @@ import {SearchPipe} from '../search.pipe';
 })
 export class MapCompComponent implements OnInit {
 
-  peopleData: any[] = [];
-
   constructor(
     public searchService: SearchService,
     private card: GetCardInfoService,
@@ -31,7 +29,6 @@ export class MapCompComponent implements OnInit {
       $('input[name=\'room\']').click();
       console.log('que ça marche!');
       document.getElementById('mainSearchBar').focus();
-      return this.searchPipe.transform(idAttr.searchService);
   } else { console.log('il ny as rien');
 }
   }
