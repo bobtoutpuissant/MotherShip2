@@ -27,12 +27,12 @@ export class MapCompComponent implements OnInit {
     const idAttr = event.target.id;
     console.log(idAttr);
     if (idAttr !== 'W0' && idAttr !== 'W1' && idAttr !== 'W2') {
-      $('input[name=\'search\']').val(idAttr);
+      this.searchService.mainSearchBar = event.target.id;
       $('input[name=\'room\']').click();
       console.log('que ça marche!');
       document.getElementById('mainSearchBar').focus();
-      return this.searchPipe.transform(idAttr.searchService);
-  } else { console.log('il ny as rien');
-}
+    } else {
+      console.log('il ny as rien');
+    }
   }
 }

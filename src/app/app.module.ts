@@ -48,7 +48,8 @@ import SearchService from '../services/search.service';
       provide: PERFECT_SCROLLBAR_CONFIG,
       useValue: PERFECT_SCROLLBAR_CONFIG,
     },
-    SearchService
+    SearchService,
+    SearchPipe
   ],
   bootstrap: [AppComponent]
 })

@@ -11,17 +11,12 @@ export class SearchPipe implements PipeTransform {
   ) {}
 
   transform(items: any[]): any[] {
-    console.log('searchfilter working');
 
     if (!items) {
       return [];
     }
 
     const mainSearchBar = this.searchService.mainSearchBar.toLowerCase();
-
-    if (mainSearchBar.length < 2) {
-      return [];
-    }
 
     if (!this.searchService.mainSearchBar) {
       return items;
