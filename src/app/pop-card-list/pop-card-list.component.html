@@ -1,15 +1,18 @@
-<perfect-scrollbar style="max-width: 600px; max-height: 600px;" [config]="">
-    <!-- setting pipe to filter results pf src bar, generating multiples cards -->
-    <div class="card mb-3" *ngFor='let people of peopleList | search: searchService.mainSearchBar'>
-        <div class="card-header">
-            <b>{{people.givenName}} {{people.sn}}</b>
-        </div>
-        <div class="card-body">
-            <img src="">
-            <p class="card-title">{{people.room}}</p>
-            <p class="card-text">{{people.mail}}</p>
-            <!-- <p class="card-text">26, Av J-F Champollion - BP. 52309</p>
+<perfect-scrollbar class="row" style="max-width: 500px; max-height: 50em;" [config]="">
+    <div class="col-11">
+        <!-- setting pipe to filter results pf src bar, generating multiples cards -->
+        <div class="card mb-3" *ngFor='let people of peopleList | search: searchService.mainSearchBar'>
+            <div class="card-header">
+                <b>{{people.givenName}} {{people.sn}}</b>
+            </div>
+            <div class="card-body">
+                <img src="">
+                <p class="card-title">{{people.room}}</p>
+                <p class="card-text">{{people.mail}}</p>
+                <!-- <p class="card-text">26, Av J-F Champollion - BP. 52309</p>
       <p class="card-text">31023 Toulouse Cedex 1 - France</p> -->
+            </div>
         </div>
     </div>
+    <div class="col-1"></div>
 </perfect-scrollbar>
