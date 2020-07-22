@@ -21,7 +21,7 @@ export class MapCompComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  clickMap(event: any) {
+  clickMap(event: any): void {
     const idAttr = event.target.id;
     console.log(idAttr);
     if (idAttr !== 'W0' && idAttr !== 'W1' && idAttr !== 'W2') {
@@ -29,6 +29,8 @@ export class MapCompComponent implements OnInit {
       $('input[name=\'room\']').click();
       console.log('que ça marche!');
       document.getElementById('mainSearchBar').focus();
+      event.target.classList.add('clicked');
+      document.getElementById(idAttr);
     } else {
       console.log('il ny as rien');
     }

@@ -1,10 +1,10 @@
 path:hover:not(.nohover),
 rect:hover:not(.nohover),
 polygon:hover:not(.nohover) {
-    transition: all linear 0.1s;
+    transition: all linear 0.2s;
     stroke-width: 10px;
     stroke-linejoin: round;
-    fill: rgba($color: #006699, $alpha: 0.3) !important;
+    fill: rgba($color: #006699, $alpha: 0.3);
     cursor: pointer;
 }
 
@@ -28,6 +28,19 @@ polygon.nohover:hover {
     fill: rgba($color: #8b0000, $alpha: 0.2);
     border-style: dashed;
     cursor: no-drop;
+}
+
+path.clicked,
+rect.clicked,
+polygon.clicked {
+    fill: rgba($color: #e4760f, $alpha: 0.4);
+    box-shadow: 10px 5px 5px orange;
+}
+
+path.clicked:hover,
+rect.clicked:hover,
+polygon.clicked:hover {
+    fill: rgba($color: #0fe456, $alpha: 0.4);
 }
 
 // #W1:not(.nohover),

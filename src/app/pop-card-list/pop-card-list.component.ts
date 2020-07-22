@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import SearchService from 'src/services/search.service';
 import { HttpClient } from '@angular/common/http';
-import { AsyncPipe } from '@angular/common';
 
 @Component({
   selector: 'app-pop-card-list',
@@ -15,6 +14,7 @@ export class PopCardListComponent implements OnInit {
   text: any ;
   JSONData: any;
   csvTextPeople: 'assets/data/people.csv';
+  filename: 'people.sn people.givenName' ;
 
   csvJSON(csv): any {
 
@@ -63,5 +63,17 @@ export class PopCardListComponent implements OnInit {
       this.peopleList = this.csvJSON(data);
       console.log(this.peopleList);
     });
+  }
+  clickMap(event: any) {
+    const idAttr = event.target.id;
+    console.log(idAttr);
+    if (idAttr !== 'W0' && idAttr !== 'W1' && idAttr !== 'W2') {
+      this.searchService.mainSearchBar = event.target.id;
+      $('input[name=\'room\']').click();
+      console.log('que ça marche!');
+      document.getElementById('mainSearchBar').focus();
+    } else {
+      console.log('il ny as rien');
+    }
   }
 }
