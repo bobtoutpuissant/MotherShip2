@@ -30,3 +30,69 @@ svg {
     background-color: rgb(223, 9, 9);
     color: white;
 }
+
+mat-icon {
+    color: white;
+}
+
+.doHide {
+    display: hide;
+}
+
+.imgLink {
+    height: 90%;
+    width: 90%;
+}
+
+.spacer-10 {
+    margin-top: 10px;
+}
+
+.spacer-20 {
+    margin-top: 20px;
+}
+
+.navBlock {
+    background: red;
+}
+
+ul,
+ol {
+    list-style: none;
+    width: 100%;
+    margin: auto;
+}
+
+.linkImg {
+    border-color: rgb(36, 36, 33);
+    border-width: 2px;
+}
+
+.cardBlockShadow {
+    box-shadow: 0 0 5px gray;
+}
+
+.cardBlockShadow:hover {
+    box-shadow: 0 0 5px red;
+}
+
+
+/* nav custom colors */
+
+.nav-pills .nav-link.active,
+.nav-pills .show>.nav-link {
+    background-color: #525657;
+    color: whitesmoke;
+    font-weight: bold;
+}
+
+.nav-pills .nav-link,
+.nav-pills .show>.nav-link {
+    color: #525657;
+    font-weight: bold;
+}
+
+.nav-pills>a.active,
+.nav-pills>a.active:hover {
+    background-color: rgb(187, 10, 10);
+}

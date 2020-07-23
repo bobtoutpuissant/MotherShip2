@@ -13,13 +13,15 @@ import { MatSliderModule } from '@angular/material/slider';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import {MatIconModule} from '@angular/material/icon';
+import {CdkScrollableModule} from '@angular/cdk/scrolling';
 import { SearchPipe } from './search.pipe';
 
-import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
-import { PERFECT_SCROLLBAR_CONFIG } from 'ngx-perfect-scrollbar';
-import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
 import { FormsModule } from '@angular/forms';
 import SearchService from '../services/search.service';
+import { AppRoutingModule } from './app-routing.module';
+import { StartpageMainComponent } from './startpage-main/startpage-main.component';
+import { StartpagePlusComponent } from './startpage-plus/startpage-plus.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,9 @@ import SearchService from '../services/search.service';
     MapCompComponent,
     SrcBarComponent,
     AppContComponent,
-    SearchPipe
+    SearchPipe,
+    StartpageMainComponent,
+    StartpagePlusComponent
   ],
   imports: [
     BrowserModule,
@@ -39,15 +43,12 @@ import SearchService from '../services/search.service';
     MatToolbarModule,
     MatFormFieldModule,
     MatInputModule,
+    MatIconModule,
     HttpClientModule,
-    PerfectScrollbarModule,
-
+    CdkScrollableModule,
+    AppRoutingModule
   ],
   providers: [
-    {
-      provide: PERFECT_SCROLLBAR_CONFIG,
-      useValue: PERFECT_SCROLLBAR_CONFIG,
-    },
     SearchService,
     SearchPipe
   ],

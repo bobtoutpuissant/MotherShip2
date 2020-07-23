@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import SearchService from 'src/services/search.service';
 import { HttpClient } from '@angular/common/http';
 
+
 @Component({
   selector: 'app-pop-card-list',
   templateUrl: './pop-card-list.component.html',

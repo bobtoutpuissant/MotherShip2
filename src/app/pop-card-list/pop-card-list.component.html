@@ -1,19 +1,19 @@
-<perfect-scrollbar class="row align-content-center" style="max-width: 500px; max-height: 90vh; margin: 0px;" [config]="">
-    <div class="col-12 align-content-center">
+<div class="row" id="scrollboxList">
+    <div class="col-12">
         <!-- setting pipe to filter results pf src bar, generating multiples cards -->
         <div class="card mb-3" *ngFor='let people of peopleList | search: searchService.mainSearchBar'>
             <div class="card-header">
                 <b>{{people.givenName}} {{people.sn}}</b>
             </div>
             <div class="card-body row">
-                <img src="../../assets/img/{{people.sn | uppercase}} {{people.givenName}}.jpg" onerror="if (this.src != '../../assets/img/error.gif') this.src = '../../assets/img/error.gif';" class="col-3">
+                <img src="../../assets/img/{{people.sn | uppercase}} {{people.givenName}}.jpg" onerror="if (this.src != '../../assets/img/flower.jpg') this.src = '../../assets/img/flower.jpg';" class="peopleIconPhoto col-3">
                 <div>
                     <p class="card-text">{{people.mail}}</p>
                     <p class="card-title roomNumberOnCard" id="{{people.room}}" (click)="clickMap($event)">{{people.room}}</p>
                     <!-- <p class="card-text">26, Av J-F Champollion - BP. 52309</p>
       <p class="card-text">31023 Toulouse Cedex 1 - France</p> -->
-                </div>
+                </div>ng
             </div>
         </div>
     </div>
-</perfect-scrollbar>
+</div>

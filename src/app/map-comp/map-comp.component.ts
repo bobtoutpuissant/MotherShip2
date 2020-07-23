@@ -29,7 +29,6 @@ export class MapCompComponent implements OnInit {
       $('input[name=\'room\']').click();
       console.log('que ça marche!');
       document.getElementById('mainSearchBar').focus();
-      event.target.classList.add('clicked');
       document.getElementById(idAttr);
     } else {
       console.log('il ny as rien');

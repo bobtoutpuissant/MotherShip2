@@ -1,7 +1,18 @@
 <mat-toolbar class="redColor" color="">
-    <span class="col-md-2 col-sm-5">Telespazio Mapper</span>
+    <a routerLink="/home">
+        <img id="mainLogo" src="../../assets/img/TELESPAZIO_LOGO.png">
+    </a>
+    <a class="menuLinks" routerLink="/">
+        <mat-icon>home</mat-icon>
+    </a>
+    <a class="menuLinks" routerLink="/plus">
+        <mat-icon>add_circle</mat-icon>
+    </a>
+    <a class="menuLinks" routerLink="/map">
+        <mat-icon>layers</mat-icon>
+    </a>
     <span class="filler"></span>
-    <mat-form-field class="col-md-3 col-sm-7">
+    <mat-form-field [routerLink]="['map']" routerLinkActive="">
         <input matInput type="text" name="search" [(ngModel)]="searchService.mainSearchBar" placeholder="Recherche" id="mainSearchBar" #searchBarInput>
     </mat-form-field>
 </mat-toolbar>
