@@ -30,16 +30,16 @@ polygon.nohover:hover {
     cursor: no-drop;
 }
 
-path.clicked,
-rect.clicked,
-polygon.clicked {
+path.highlightMap,
+rect.highlightMap,
+polygon.highlightMap {
     fill: rgba($color: #e4760f, $alpha: 0.4);
     box-shadow: 10px 5px 5px orange;
 }
 
-path.clicked:hover,
-rect.clicked:hover,
-polygon.clicked:hover {
+path.highlightMap:hover,
+rect.highlightMap:hover,
+polygon.highlightMap:hover {
     fill: rgba($color: #0fe456, $alpha: 0.4);
 }
 

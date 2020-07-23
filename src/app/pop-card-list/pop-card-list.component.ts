@@ -73,6 +73,11 @@ export class PopCardListComponent implements OnInit {
       $('input[name=\'room\']').click();
       console.log('que ça marche!');
       document.getElementById('mainSearchBar').focus();
+      const addclass = 'highlightMap';
+      const $cols = $('.mapItem').click(function(e) {
+    $cols.removeClass(addclass);
+    $(this).addClass(addclass);
+});
     } else {
       console.log('il ny as rien');
     }
