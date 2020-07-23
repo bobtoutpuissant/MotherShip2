@@ -17,6 +17,7 @@ export class SearchPipe implements PipeTransform {
     }
 
     const mainSearchBar = this.searchService.mainSearchBar.toLowerCase();
+    const searchTUC = this.searchService.mainSearchBar.toUpperCase();
 
     if (mainSearchBar.length < 2) {
       return [];
@@ -26,9 +27,19 @@ export class SearchPipe implements PipeTransform {
       return items;
     }
 
+    if (searchTUC.startsWith('W') && mainSearchBar.length > 3) {
+      const addclass = 'highlightMap';
+      $('.mapItem').removeClass(addclass);
+      const choosenOne = document.getElementById(searchTUC);
+      choosenOne.classList.add(addclass);
+      console.log(choosenOne);
+}
+
     return items.filter(it => {
       return JSON.stringify(it).toLowerCase().match(mainSearchBar);
-    });
+        }
+    );
   }
 
 }
+

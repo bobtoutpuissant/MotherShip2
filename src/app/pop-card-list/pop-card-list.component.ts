@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import SearchService from 'src/services/search.service';
 import { HttpClient } from '@angular/common/http';
+import SearchService from 'src/services/search.service';
 
 
 @Component({
@@ -55,8 +55,8 @@ export class PopCardListComponent implements OnInit {
 }
 
   constructor(
-    public searchService: SearchService,
     public jsoner: HttpClient,
+    public searchService: SearchService,
   ) { }
 
   ngOnInit(): void {
@@ -64,22 +64,5 @@ export class PopCardListComponent implements OnInit {
       this.peopleList = this.csvJSON(data);
       console.log(this.peopleList);
     });
-  }
-  clickMap(event: any) {
-    const idAttr = event.target.id;
-    console.log(idAttr);
-    if (idAttr !== 'W0' && idAttr !== 'W1' && idAttr !== 'W2') {
-      this.searchService.mainSearchBar = event.target.id;
-      $('input[name=\'room\']').click();
-      console.log('que ça marche!');
-      document.getElementById('mainSearchBar').focus();
-      const addclass = 'highlightMap';
-      const $cols = $('.mapItem').click(function(e) {
-    $cols.removeClass(addclass);
-    $(this).addClass(addclass);
-});
-    } else {
-      console.log('il ny as rien');
-    }
   }
 }
