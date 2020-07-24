@@ -1,7 +1,12 @@
-<mat-toolbar class="redColor" color="">
+<!-- <mat-toolbar class="redColor"> -->
+<mat-toolbar id="searchBar">
     <a routerLink="/home">
-        <img id="mainLogo" src="../../assets/img/TELESPAZIO_LOGO.png">
+        <img id="mainLogo" src="../../assets/img/TELESPAZIO_LOGO_COLOR.png">
     </a>
+    <span class="filler"></span>
+    <mat-form-field appearance="standard" id="recherche" *ngIf="router.url == '/map'" [routerLink]="['map']" routerLinkActive="">
+        <input matInput type="text" name="search" [(ngModel)]="searchService.mainSearchBar" placeholder="Recherche" id="mainSearchBar" #searchBarInput>
+    </mat-form-field>
     <a class="menuLinks" routerLink="/">
         <mat-icon>home</mat-icon>
     </a>
@@ -11,8 +16,4 @@
     <a class="menuLinks" routerLink="/map">
         <mat-icon>layers</mat-icon>
     </a>
-    <span class="filler"></span>
-    <mat-form-field [routerLink]="['map']" routerLinkActive="">
-        <input matInput type="text" name="search" [(ngModel)]="searchService.mainSearchBar" placeholder="Recherche" id="mainSearchBar" #searchBarInput>
-    </mat-form-field>
 </mat-toolbar>

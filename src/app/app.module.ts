@@ -22,6 +22,8 @@ import SearchService from '../services/search.service';
 import { AppRoutingModule } from './app-routing.module';
 import { StartpageMainComponent } from './startpage-main/startpage-main.component';
 import { StartpagePlusComponent } from './startpage-plus/startpage-plus.component';
+import { StartpageMainRestrictedComponent } from './startpage-main-restricted/startpage-main-restricted.component';
+import { StartpagePlusRestrictedComponent } from './startpage-plus-restricted/startpage-plus-restricted.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +35,9 @@ import { StartpagePlusComponent } from './startpage-plus/startpage-plus.componen
     AppContComponent,
     SearchPipe,
     StartpageMainComponent,
-    StartpagePlusComponent
+    StartpagePlusComponent,
+    StartpageMainRestrictedComponent,
+    StartpagePlusRestrictedComponent
   ],
   imports: [
     BrowserModule,

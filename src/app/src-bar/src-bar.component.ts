@@ -9,16 +9,13 @@ import { Router } from '@angular/router';
   styleUrls: ['./src-bar.component.scss']
 })
 export class SrcBarComponent implements OnInit {
-  router: string;
   peopleData: any[] = [];
 
   constructor(
     private card: GetCardInfoService,
     public searchService: SearchService,
-    private _router: Router
-  ) {
-    this.router = _router.url;
-   }
+    public router: Router
+  ) {}
 
   ngOnInit(): void {
   }

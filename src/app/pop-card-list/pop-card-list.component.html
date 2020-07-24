@@ -1,5 +1,5 @@
 <div class="row" id="scrollboxList">
     <div class="col-12">
-        <app-pop-card-temp *ngFor='let people of peopleList | search: searchService.mainSearchBar'></app-pop-card-temp>
+        <app-pop-card-temp [people]="people" *ngFor='let people of peopleList | search: searchService.mainSearchBar'></app-pop-card-temp>
     </div>
 </div>
