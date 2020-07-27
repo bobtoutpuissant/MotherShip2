@@ -1,6 +1,9 @@
 export interface People {
-  sn: string;
-  room: string;
-  givenName: string;
+  name: string;
+  role: string;
+  tpzphone: string;
+  phone: string;
   mail: string;
+  room: string;
+  image: string;
 }

@@ -1,15 +1,23 @@
 <!-- setting pipe to filter results pf src bar, generating multiples cards -->
 <div class="card mb-3 peopleCard" (click)="clickMap($event)">
     <div class="card-header">
-        <b>{{people.givenName}} {{people.sn}}</b>
+        <b>{{people.name}}</b>
     </div>
-    <div class="card-body row">
-        <img src="../../assets/img/{{people.sn | uppercase}} {{people.givenName}}.jpg" onerror="if (this.src != '../../assets/img/flower.jpg') this.src = '../../assets/img/flower.jpg';" class="peopleIconPhoto col-3">
-        <div>
-            <p class="card-text">{{people.mail}}</p>
-            <p class="card-title roomNumberOnCard">{{people.room}}</p>
-            <!-- <p class="card-text">26, Av J-F Champollion - BP. 52309</p>
+    <div class="card-body">
+        <div class="row">
+            <img src="../../assets/img/{{people.image}}" onerror="if (this.src != '../../assets/img/flower.jpg') this.src = '../../assets/img/flower.jpg';" class="peopleIconPhoto col-3">
+            <div>
+                <p class="card-text">{{people.mail}}</p>
+                <p class="card-title roomNumberOnCard">{{people.room}}</p>
+                <!-- <p class="card-text">26, Av J-F Champollion - BP. 52309</p>
 <p class="card-text">31023 Toulouse Cedex 1 - France</p> -->
+            </div>
+        </div>
+        <div class="row">
+            <p class="card-text">{{people.role}}</p>
+            <p class="card-text">{{people.phone}}</p>
+            <p class="card-text">{{people.tpzphone}}</p>
+
         </div>
     </div>
 </div>
