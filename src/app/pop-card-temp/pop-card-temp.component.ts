@@ -13,7 +13,7 @@ export class PopCardTempComponent implements OnInit {
   people: People;
 
   constructor(
-    public searchService: SearchService,
+    private searchService: SearchService,
     ) { }
 
   ngOnInit(): void {
@@ -43,10 +43,10 @@ export class PopCardTempComponent implements OnInit {
         switchMepanel.classList.add('active');
         unswitch1.classList.remove('active');
         unswitch1.setAttribute('aria-selected', 'false');
-        switchMepanel.classList.remove('active');
+        unswitch1panel.classList.remove('active');
         unswitch2.classList.remove('active');
         unswitch2.setAttribute('aria-selected', 'false');
-        switchMepanel.classList.remove('active');
+        unswitch2panel.classList.remove('active');
         console.log('switchMe' + switchMe);
         console.log('unswitch1' + unswitch1);
         console.log('unswitch2' + unswitch2);
@@ -66,10 +66,10 @@ export class PopCardTempComponent implements OnInit {
     switchMepanel.classList.add('active');
     unswitch1.classList.remove('active');
     unswitch1.setAttribute('aria-selected', 'false');
-    switchMepanel.classList.remove('active');
+    unswitch1panel.classList.remove('active');
     unswitch2.classList.remove('active');
     unswitch2.setAttribute('aria-selected', 'false');
-    switchMepanel.classList.remove('active');
+    unswitch2panel.classList.remove('active');
     console.log('switchMe' + switchMe);
     console.log('unswitch1' + unswitch1);
     console.log('unswitch2' + unswitch2);
@@ -88,10 +88,10 @@ export class PopCardTempComponent implements OnInit {
     switchMepanel.classList.add('active');
     unswitch1.classList.remove('active');
     unswitch1.setAttribute('aria-selected', 'false');
-    switchMepanel.classList.remove('active');
+    unswitch1panel.classList.remove('active');
     unswitch2.classList.remove('active');
     unswitch2.setAttribute('aria-selected', 'false');
-    switchMepanel.classList.remove('active');
+    unswitch2panel.classList.remove('active');
     console.log('switchMe' + switchMe);
     console.log('unswitch1' + unswitch1);
     console.log('unswitch2' + unswitch2);

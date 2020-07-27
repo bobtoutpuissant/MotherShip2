@@ -56,7 +56,7 @@ export class PopCardListComponent implements OnInit {
 
   constructor(
     public jsoner: HttpClient,
-    public searchService: SearchService,
+    private searchService: SearchService,
   ) { }
 
   ngOnInit(): void {

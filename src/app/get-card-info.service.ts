@@ -6,7 +6,7 @@ import {HttpClient} from '@angular/common/http';
 })
 export class GetCardInfoService {
 
-  peopleData ='';
+  peopleData = '';
 
   constructor(private http: HttpClient) {}
 

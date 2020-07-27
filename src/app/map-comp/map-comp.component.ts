@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
 import * as $ from 'jquery';
 import { GetCardInfoService } from '../get-card-info.service';
 import SearchService from 'src/services/search.service';
@@ -10,11 +9,12 @@ import {SearchPipe} from '../search.pipe';
   templateUrl: './map-comp.component.html',
   styleUrls: ['./map-comp.component.scss']
 })
+
 export class MapCompComponent implements OnInit {
 
   constructor(
-    public searchService: SearchService,
     private card: GetCardInfoService,
+    private searchService: SearchService,
     private searchPipe: SearchPipe,
   ) { }
 
