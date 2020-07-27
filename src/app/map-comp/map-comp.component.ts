@@ -14,7 +14,7 @@ export class MapCompComponent implements OnInit {
 
   constructor(
     private card: GetCardInfoService,
-    private searchService: SearchService,
+    public searchService: SearchService,
     private searchPipe: SearchPipe,
   ) { }
 

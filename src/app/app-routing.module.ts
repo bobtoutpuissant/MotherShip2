@@ -11,10 +11,10 @@ import { StartpagePlusRestrictedComponent } from './startpage-plus-restricted/st
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   {path: 'map', component: AppContComponent},
-  // {path: 'home', component: StartpageMainRestrictedComponent},
-  // {path: 'plus', component: StartpagePlusRestrictedComponent}
-  {path: 'home', component: StartpageMainComponent},
-  {path: 'plus', component: StartpagePlusComponent}
+  {path: 'home', component: StartpageMainRestrictedComponent},
+  {path: 'plus', component: StartpagePlusRestrictedComponent}
+  // {path: 'home', component: StartpageMainComponent},
+  // {path: 'plus', component: StartpagePlusComponent}
 ];
 
 @NgModule({

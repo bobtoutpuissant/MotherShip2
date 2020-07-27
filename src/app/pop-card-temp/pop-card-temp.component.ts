@@ -13,7 +13,7 @@ export class PopCardTempComponent implements OnInit {
   people: People;
 
   constructor(
-    private searchService: SearchService,
+    public searchService: SearchService,
     ) { }
 
   ngOnInit(): void {
