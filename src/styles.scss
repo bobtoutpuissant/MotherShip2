@@ -108,3 +108,17 @@ ol {
 .peopleCard:hover {
     box-shadow: 0 0 5px red;
 }
+
+.scrollboxList {
+    overflow: auto;
+    max-width: 500px;
+    max-height: 90vh;
+    margin: 0px;
+}
+
+.scrollboxMap {
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: 90vh;
+    margin: 0px;
+}
