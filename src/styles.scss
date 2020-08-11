@@ -6,6 +6,12 @@ body {
     height: 100%;
 }
 
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+    /* make scrollbar transparent */
+}
+
 body {
     margin: 0;
     font-family: Roboto, "Helvetica Neue", sans-serif;
@@ -112,7 +118,7 @@ ol {
 .scrollboxList {
     overflow: auto;
     max-width: 500px;
-    max-height: 90vh;
+    max-height: 88vh;
     margin: 0px;
 }
 
@@ -121,4 +127,16 @@ ol {
     overflow-x: hidden;
     max-height: 90vh;
     margin: 0px;
+}
+
+.bigMessage {
+    font-size: 7em;
+}
+
+div.spacerPagination {
+    padding-top: 30px;
+}
+
+.mainStuff {
+    margin-top: 66px;
 }

@@ -20,10 +20,8 @@ import { SearchPipe } from './search.pipe';
 import { FormsModule } from '@angular/forms';
 import SearchService from '../services/search.service';
 import { AppRoutingModule } from './app-routing.module';
-import { StartpageMainComponent } from './startpage-main/startpage-main.component';
-import { StartpagePlusComponent } from './startpage-plus/startpage-plus.component';
-import { StartpageMainRestrictedComponent } from './startpage-main-restricted/startpage-main-restricted.component';
-import { StartpagePlusRestrictedComponent } from './startpage-plus-restricted/startpage-plus-restricted.component';
+import { HomePageComponent } from './home-page/home-page.component';
+import { ErrorComponent } from './error/error.component';
 
 @NgModule({
   declarations: [
@@ -34,10 +32,8 @@ import { StartpagePlusRestrictedComponent } from './startpage-plus-restricted/st
     SrcBarComponent,
     AppContComponent,
     SearchPipe,
-    StartpageMainComponent,
-    StartpagePlusComponent,
-    StartpageMainRestrictedComponent,
-    StartpagePlusRestrictedComponent
+    HomePageComponent,
+    ErrorComponent,
   ],
   imports: [
     BrowserModule,

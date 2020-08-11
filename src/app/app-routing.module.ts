@@ -1,24 +1,44 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AppContComponent } from './app-cont/app-cont.component';
-import { StartpageMainComponent } from './startpage-main/startpage-main.component';
-import { StartpagePlusComponent } from './startpage-plus/startpage-plus.component';
-import { StartpageMainRestrictedComponent } from './startpage-main-restricted/startpage-main-restricted.component';
-import { StartpagePlusRestrictedComponent } from './startpage-plus-restricted/startpage-plus-restricted.component';
+import { HomePageComponent } from './home-page/home-page.component';
+import { Page1Component } from './home-page/page1/page1.component';
+import { Page2Component } from './home-page/page2/page2.component';
+import { ErrorComponent } from './error/error.component';
 
 
 
 const routes: Routes = [
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
-  {path: 'map', component: AppContComponent},
-  {path: 'home', component: StartpageMainRestrictedComponent},
-  {path: 'plus', component: StartpagePlusRestrictedComponent}
-  // {path: 'home', component: StartpageMainComponent},
-  // {path: 'plus', component: StartpagePlusComponent}
+  {
+    path: '',
+    redirectTo: 'home/page1',
+    pathMatch: 'full'
+  },
+  {
+    path: 'home',
+    redirectTo: 'home/page1',
+    pathMatch: 'full'
+  },
+  {
+    path: 'map',
+  component: AppContComponent
+},
+  {
+    path: 'home',
+  component: HomePageComponent,
+  children: [
+    {path: 'page1', component: Page1Component },
+    {path: 'page2', component: Page2Component }
+  ]
+},
+{
+  path: '**',
+  component: ErrorComponent
+},
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, { enableTracing: false })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
