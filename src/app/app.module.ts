@@ -14,6 +14,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import {MatIconModule} from '@angular/material/icon';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {CdkScrollableModule} from '@angular/cdk/scrolling';
 import { SearchPipe } from './search.pipe';
 
@@ -44,6 +45,7 @@ import { ErrorComponent } from './error/error.component';
     MatFormFieldModule,
     MatInputModule,
     MatIconModule,
+    MatProgressSpinnerModule,
     HttpClientModule,
     CdkScrollableModule,
     AppRoutingModule
