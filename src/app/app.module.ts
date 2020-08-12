@@ -48,11 +48,11 @@ import { ErrorComponent } from './error/error.component';
     MatProgressSpinnerModule,
     HttpClientModule,
     CdkScrollableModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [
     SearchService,
-    SearchPipe
+    SearchPipe,
   ],
   bootstrap: [AppComponent]
 })
