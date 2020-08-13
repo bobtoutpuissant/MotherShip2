@@ -1,10 +1,9 @@
 import { Injectable } from '@angular/core';
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: 'root'
 })
-export default class SearchService {
+export class SearchService {
 
   public mainSearchBar = '';
-
 }

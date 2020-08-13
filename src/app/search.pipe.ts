@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import SearchService from 'src/services/search.service';
+import {SearchService} from 'src/services/search.service';
 
 @Pipe({
   name: 'search'
@@ -42,4 +42,3 @@ export class SearchPipe implements PipeTransform {
   }
 
 }
-

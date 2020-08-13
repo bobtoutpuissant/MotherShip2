@@ -1,21 +1,23 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
 
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { PopCardTempComponent } from './pop-card-temp/pop-card-temp.component';
-import { PopCardListComponent } from './pop-card-list/pop-card-list.component';
-import { MapCompComponent } from './map-comp/map-comp.component';
-import { SrcBarComponent } from './src-bar/src-bar.component';
-import { AppContComponent } from './app-cont/app-cont.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SearchBarComponent } from './search-bar/search-bar.component';
+import { MapPageComponent } from './routes/map-page/map-page.component';
+import { LinkPageComponent } from './routes/link-page/link-page.component';
+import { Page1Component } from './routes/link-page/page1/page1.component';
+import { Page2Component } from './routes/link-page/page2/page2.component';
+import { MapComponent } from './routes/map-page/map/map.component';
+import { PeopleListComponent } from './routes/map-page/people-list/people-list.component';
+import { PeopleCardComponent } from './routes/map-page/people-list/people-card/people-card.component';
+
 import { MatSliderModule } from '@angular/material/slider';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import {MatIconModule} from '@angular/material/icon';
-import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
-import {CdkScrollableModule} from '@angular/cdk/scrolling';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SearchPipe } from './search.pipe';
 
 import { FormsModule } from '@angular/forms';
@@ -27,33 +29,27 @@ import { ErrorComponent } from './error/error.component';
 @NgModule({
   declarations: [
     AppComponent,
-    PopCardTempComponent,
-    PopCardListComponent,
-    MapCompComponent,
-    SrcBarComponent,
-    AppContComponent,
-    SearchPipe,
-    HomePageComponent,
-    ErrorComponent,
+    SearchBarComponent,
+    MapPageComponent,
+    LinkPageComponent,
+    Page1Component,
+    Page2Component,
+    MapComponent,
+    PeopleListComponent,
+    PeopleCardComponent,
+    SearchPipe
   ],
   imports: [
     BrowserModule,
-    FormsModule,
-    BrowserAnimationsModule,
+    AppRoutingModule,
     MatSliderModule,
     MatToolbarModule,
     MatFormFieldModule,
     MatInputModule,
     MatIconModule,
-    MatProgressSpinnerModule,
-    HttpClientModule,
-    CdkScrollableModule,
-    AppRoutingModule,
+    BrowserAnimationsModule,
   ],
-  providers: [
-    SearchService,
-    SearchPipe,
-  ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
