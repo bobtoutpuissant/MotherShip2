@@ -19,7 +19,7 @@ import {CdkScrollableModule} from '@angular/cdk/scrolling';
 import { SearchPipe } from './search.pipe';
 
 import { FormsModule } from '@angular/forms';
-import SearchService from '../services/search.service';
+import {SearchService} from '../services/search.service';
 import { AppRoutingModule } from './app-routing.module';
 import { HomePageComponent } from './home-page/home-page.component';
 import { ErrorComponent } from './error/error.component';
