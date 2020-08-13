@@ -1,146 +1,39 @@
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@import '~@angular/material/theming';
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat-core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$MS2Transit-primary: mat-palette($mat-indigo);
+$MS2Transit-accent: mat-palette($mat-pink, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$MS2Transit-warn: mat-palette($mat-red);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$MS2Transit-theme: mat-light-theme((
+  color: (
+    primary: $MS2Transit-primary,
+    accent: $MS2Transit-accent,
+    warn: $MS2Transit-warn,
+  )
+));
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($MS2Transit-theme);
+
 /* You can add global styles to this file, and also import other style files */
 
-@import '~bootstrap/dist/css/bootstrap.min.css';
-html,
-body {
-    height: 100%;
-}
-
-::-webkit-scrollbar {
-    width: 0px;
-    background: transparent;
-    /* make scrollbar transparent */
-}
-
-body {
-    margin: 0;
-    font-family: Roboto, "Helvetica Neue", sans-serif;
-    overflow-y: hidden;
-    overflow-x: hidden;
-}
-
-svg {
-    width: 90%;
-    height: 90%;
-}
-
-.spacer-1 {
-    height: 20px;
-}
-
-.spacer-2 {
-    height: 40px;
-}
-
-.redColor {
-    background-color: rgb(223, 9, 9);
-    color: white;
-}
-
-mat-icon {
-    color: black;
-}
-
-.doHide {
-    display: hide;
-}
-
-.imgLink {
-    height: 90%;
-    width: 90%;
-}
-
-.spacer-10 {
-    margin-top: 10px;
-}
-
-.spacer-20 {
-    margin-top: 20px;
-}
-
-.navBlock {
-    background: red;
-}
-
-ul,
-ol {
-    list-style: none;
-    width: 100%;
-    margin: auto;
-}
-
-.linkImg {
-    border-color: rgb(36, 36, 33);
-    border-width: 2px;
-}
-
-.cardBlockShadow {
-    box-shadow: 0 0 5px gray;
-}
-
-.cardBlockShadow:hover {
-    box-shadow: 0 0 5px red;
-}
-
-
-/* nav custom colors */
-
-.nav-pills .nav-link.active,
-.nav-pills .show>.nav-link {
-    background-color: #525657;
-    color: whitesmoke;
-    font-weight: bold;
-}
-
-.nav-pills .nav-link,
-.nav-pills .show>.nav-link {
-    color: #525657;
-    font-weight: bold;
-}
-
-.nav-pills>a.active,
-.nav-pills>a.active:hover {
-    background-color: rgb(187, 10, 10);
-}
-
-#mapComp {
-    padding-right: 30px;
-}
-
-.mat-form-field-infix.ng-tns-c36-0 {
-    border-top-width: 0px;
-}
-
-.peopleCard:hover {
-    box-shadow: 0 0 5px red;
-}
-
-.scrollboxList {
-    overflow: auto;
-    max-width: 500px;
-    max-height: calc(100vh - 66px);
-    margin: 0px;
-}
-
-.scrollboxMap {
-    overflow-y: auto;
-    overflow-x: hidden;
-    max-height: 90vh;
-    margin: 0px;
-}
-
-.bigMessage {
-    font-size: 7em;
-}
-
-div.spacerPagination {
-    padding-top: 30px;
-}
-
-.mainStuff {
-    margin-top: 66px;
-}
-
-.st1 {
-    pointer-events: none;
-}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
