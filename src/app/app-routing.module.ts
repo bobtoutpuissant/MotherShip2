@@ -1,14 +1,19 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { MapPageComponent } from './Routes/map-page/map-page.component';
-import { LinkPageComponent } from './Routes/link-page/link-page.component';
-import { Page1Component } from './Routes/link-page/page1/page1.component';
-import { Page2Component } from './Routes/link-page/page2/page2.component';
+import { MapPageComponent } from './ro/map-page/map-page.component';
+import { LinkPageComponent } from './ro/link-page/link-page.component';
+import { Page1Component } from './ro/link-page/page1/page1.component';
+import { Page2Component } from './ro/link-page/page2/page2.component';
 
 
 const routes: Routes = [
   {
     path: '',
+    redirectTo: 'home/page1',
+    pathMatch: 'full'
+  },
+  {
+    path: 'home',
     redirectTo: 'home/page1',
     pathMatch: 'full'
   },

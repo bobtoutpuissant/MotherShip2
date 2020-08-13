@@ -20,7 +20,7 @@ export class MapComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  clickMap(event: any) {
+  clickMap(event: any): void {
     const idAttr = event.target.id;
     console.log(idAttr);
     if (idAttr !== 'W0' && idAttr !== 'W1' && idAttr !== 'W2') {

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import {SearchService} from 'src/services/search.service';
+import { SearchService } from 'src/services/search.service';
 
 @Component({
   selector: 'app-people-list',

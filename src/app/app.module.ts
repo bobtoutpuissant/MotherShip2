@@ -4,13 +4,13 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SearchBarComponent } from './search-bar/search-bar.component';
-import { MapPageComponent } from './routes/map-page/map-page.component';
-import { LinkPageComponent } from './routes/link-page/link-page.component';
-import { Page1Component } from './routes/link-page/page1/page1.component';
-import { Page2Component } from './routes/link-page/page2/page2.component';
-import { MapComponent } from './routes/map-page/map/map.component';
-import { PeopleListComponent } from './routes/map-page/people-list/people-list.component';
-import { PeopleCardComponent } from './routes/map-page/people-list/people-card/people-card.component';
+import { MapPageComponent } from './ro/map-page/map-page.component';
+import { LinkPageComponent } from './ro/link-page/link-page.component';
+import { Page1Component } from './ro/link-page/page1/page1.component';
+import { Page2Component } from './ro/link-page/page2/page2.component';
+import { MapComponent } from './ro/map-page/map/map.component';
+import { PeopleListComponent } from './ro/map-page/people-list/people-list.component';
+import { PeopleCardComponent } from './ro/map-page/people-list/people-card/people-card.component';
 
 import { MatSliderModule } from '@angular/material/slider';
 import {MatToolbarModule} from '@angular/material/toolbar';
@@ -22,9 +22,7 @@ import { SearchPipe } from './search.pipe';
 
 import { FormsModule } from '@angular/forms';
 import {SearchService} from '../services/search.service';
-import { AppRoutingModule } from './app-routing.module';
-import { HomePageComponent } from './home-page/home-page.component';
-import { ErrorComponent } from './error/error.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -37,7 +35,7 @@ import { ErrorComponent } from './error/error.component';
     MapComponent,
     PeopleListComponent,
     PeopleCardComponent,
-    SearchPipe
+    SearchPipe,
   ],
   imports: [
     BrowserModule,
@@ -48,8 +46,12 @@ import { ErrorComponent } from './error/error.component';
     MatInputModule,
     MatIconModule,
     BrowserAnimationsModule,
+    HttpClientModule,
   ],
-  providers: [],
+  providers: [
+    SearchService,
+    SearchPipe,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
