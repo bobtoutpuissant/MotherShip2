@@ -1,7 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
+
 import { AppComponent } from './app.component';
 import { SearchBarComponent } from './search-bar/search-bar.component';
 import { MapPageComponent } from './ro/map-page/map-page.component';
@@ -12,17 +14,23 @@ import { MapComponent } from './ro/map-page/map/map.component';
 import { PeopleListComponent } from './ro/map-page/people-list/people-list.component';
 import { PeopleCardComponent } from './ro/map-page/people-list/people-card/people-card.component';
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import {MatIconModule} from '@angular/material/icon';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+
+import {CdkScrollableModule} from '@angular/cdk/scrolling';
+
 import { SearchPipe } from './search.pipe';
 
 import { FormsModule } from '@angular/forms';
 import {SearchService} from '../services/search.service';
-import { HttpClientModule } from '@angular/common/http';
+import { Floor2Component } from './ro/map-page/map/floor2/floor2.component';
+import { Floor1Component } from './ro/map-page/map/floor1/floor1.component';
+import { Floor0Component } from './ro/map-page/map/floor0/floor0.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +44,9 @@ import { HttpClientModule } from '@angular/common/http';
     PeopleListComponent,
     PeopleCardComponent,
     SearchPipe,
+    Floor2Component,
+    Floor1Component,
+    Floor0Component,
   ],
   imports: [
     BrowserModule,
@@ -47,6 +58,9 @@ import { HttpClientModule } from '@angular/common/http';
     MatIconModule,
     BrowserAnimationsModule,
     HttpClientModule,
+    FormsModule,
+    MatProgressSpinnerModule,
+    CdkScrollableModule,
   ],
   providers: [
     SearchService,

@@ -25,11 +25,11 @@ export class MapComponent implements OnInit {
     console.log(idAttr);
     if (idAttr !== 'W0' && idAttr !== 'W1' && idAttr !== 'W2') {
       this.searchService.mainSearchBar = event.target.id;
-      $('input[name=\'room\']').click();
+      $('input[name=\'room\']').trigger('click');
       console.log('que ça marche!');
       document.getElementById('mainSearchBar').focus();
       const addclass = 'highlightMap';
-      const $cols = $('.mapItem').click(function(e) {
+      const $cols = $('.mapItem').on('click', function(e): void {
     $cols.removeClass(addclass);
     $(this).addClass(addclass);
 });
