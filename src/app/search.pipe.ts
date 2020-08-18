@@ -1,6 +1,8 @@
 import { Pipe, PipeTransform } from '@angular/core';
 import {SearchService} from 'src/services/search.service';
 
+declare let $;
+
 @Pipe({
   name: 'search'
 })

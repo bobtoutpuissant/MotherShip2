@@ -4,22 +4,17 @@ import { RoomActivator } from 'src/assets/ts/FunctRoomActivator';
 import { GetCardInfoService } from 'src/services/get-card-info.service';
 import {SearchService} from 'src/services/search.service';
 import {SearchPipe} from 'src/app/search.pipe';
+import { FloorBaseComponent } from '../floor-base/floor-base.component';
 
 @Component({
   selector: 'app-floor2',
   templateUrl: './floor2.component.html',
   styleUrls: ['../map.component.scss']
 })
-export class Floor2Component implements OnInit {
+export class Floor2Component extends FloorBaseComponent implements OnInit {
 
   roomActivator = RoomActivator;
   clickMap = ClickMap;
-
-  constructor(
-    private card: GetCardInfoService,
-    public searchService: SearchService,
-    private searchPipe: SearchPipe,
-    ) { }
 
   ngOnInit(): void {
     if (this.searchService.mainSearchBar){
