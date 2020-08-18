@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { SearchService } from 'src/services/search.service';
-import { HighlightManager } from 'src/assets/ts/FunctHighlightManager';
 
 declare let $;
 
@@ -16,22 +15,36 @@ export class FloorBaseComponent implements OnInit {
     ) { }
 
   ngOnInit(): void {
-
+    if (this.searchService.mainSearchBar){
+      const idAttr = this.searchService.mainSearchBar;
+      this.roomActivator(idAttr);
+    }
   }
 
-  RoomActivator(idAttr: any): void{
-    console.log('3 - roomActivator est appelé, on lui envoie idAttr');
+  clickMap(event: any): void {
+    console.log(event + 'ce que recois clickmap');
+    const idAttr = event.target.id;
+    this.roomActivator(idAttr);
+  }
 
+  roomActivator(idAttr: any): void{
     if (idAttr !== 'W0' && idAttr !== 'W1' && idAttr !== 'W2') {
-      console.log('4 - On envoie idAttr dans la searchBar pour lancer la recherche');
-      console.log('    - SearchService : ' + SearchService);
-      console.log('    - mainSearchBar : ' + this.searchService.mainSearchBar);
+      this.searchService.mainSearchBar = idAttr;
       $('input[name=\'room\']').trigger('click');
-      console.log('5 - On focus la searchbar, idAttr correspond à quelque chose');
+      console.log('que ça marche!');
       document.getElementById('mainSearchBar').focus();
-      HighlightManager(idAttr);
+      this.highlightManager(idAttr);
     } else {
-      console.log('END 2 - idAttr ne renvoie vers rien');
+      console.log('il ny as rien');
     }
+  }
+
+  highlightManager(idAttr: any): void {
+    const mapItems = document.querySelectorAll('mapItem');
+    [].forEach.call(mapItems, (e: any): void => {
+      e.ClassName = e.ClassName.remove('highlightMap');
+    });
+    const roomIwantToBeFkngLightedUp = document.getElementById(idAttr);
+    roomIwantToBeFkngLightedUp.classList.add('highlightMap');
   }
 }
