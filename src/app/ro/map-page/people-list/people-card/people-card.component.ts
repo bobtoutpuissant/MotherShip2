@@ -2,6 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import {SearchService} from 'src/services/search.service';
 import {People} from 'src/assets/ts/people';
 import * as $ from 'jquery';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-people-card',
@@ -15,6 +16,7 @@ export class PeopleCardComponent implements OnInit {
 
   constructor(
     public searchService: SearchService,
+    public router: Router,
     ) { }
 
   ngOnInit(): void {
@@ -33,72 +35,12 @@ export class PeopleCardComponent implements OnInit {
     $(this).addClass(addclass);
 });
       if (idAttr.includes('W0')){
-        const switchMe = document.getElementById('floor0-tab');
-        const unswitch1 = document.getElementById('floor1-tab');
-        const unswitch2 = document.getElementById('floor2-tab');
-        const switchMepanel = document.getElementById('floor0');
-        const unswitch1panel = document.getElementById('floor1');
-        const unswitch2panel = document.getElementById('floor2');
-        switchMe.classList.add('active');
-        switchMe.setAttribute('aria-selected', 'true');
-        switchMepanel.classList.add('active');
-        unswitch1.classList.remove('active');
-        unswitch1.setAttribute('aria-selected', 'false');
-        unswitch1panel.classList.remove('active');
-        unswitch2.classList.remove('active');
-        unswitch2.setAttribute('aria-selected', 'false');
-        unswitch2panel.classList.remove('active');
-        console.log('switchMe' + switchMe);
-        console.log('unswitch1' + unswitch1);
-        console.log('unswitch2' + unswitch2);
-        console.log('switchMepanel' + switchMepanel);
-        console.log('unswitch1panel' + unswitch1panel);
-        console.log('unswitch2panel' + unswitch2panel);
+        this.router.navigate(['map/floor0']);
 } else {
   if (idAttr.includes('W1')){
-    const switchMe = document.getElementById('floor1-tab');
-    const unswitch1 = document.getElementById('floor0-tab');
-    const unswitch2 = document.getElementById('floor2-tab');
-    const switchMepanel = document.getElementById('floor1');
-    const unswitch1panel = document.getElementById('floor0');
-    const unswitch2panel = document.getElementById('floor2');
-    switchMe.classList.add('active');
-    switchMe.setAttribute('aria-selected', 'true');
-    switchMepanel.classList.add('active');
-    unswitch1.classList.remove('active');
-    unswitch1.setAttribute('aria-selected', 'false');
-    unswitch1panel.classList.remove('active');
-    unswitch2.classList.remove('active');
-    unswitch2.setAttribute('aria-selected', 'false');
-    unswitch2panel.classList.remove('active');
-    console.log('switchMe' + switchMe);
-    console.log('unswitch1' + unswitch1);
-    console.log('unswitch2' + unswitch2);
-    console.log('switchMepanel' + switchMepanel);
-    console.log('unswitch1panel' + unswitch1panel);
-    console.log('unswitch2panel' + unswitch2panel);
+    this.router.navigate(['map/floor1']);
   } else {
-    const switchMe = document.getElementById('floor2-tab');
-    const unswitch1 = document.getElementById('floor0-tab');
-    const unswitch2 = document.getElementById('floor1-tab');
-    const switchMepanel = document.getElementById('floor2');
-    const unswitch1panel = document.getElementById('floor0');
-    const unswitch2panel = document.getElementById('floor1');
-    switchMe.classList.add('active');
-    switchMe.setAttribute('aria-selected', 'true');
-    switchMepanel.classList.add('active');
-    unswitch1.classList.remove('active');
-    unswitch1.setAttribute('aria-selected', 'false');
-    unswitch1panel.classList.remove('active');
-    unswitch2.classList.remove('active');
-    unswitch2.setAttribute('aria-selected', 'false');
-    unswitch2panel.classList.remove('active');
-    console.log('switchMe' + switchMe);
-    console.log('unswitch1' + unswitch1);
-    console.log('unswitch2' + unswitch2);
-    console.log('switchMepanel' + switchMepanel);
-    console.log('unswitch1panel' + unswitch1panel);
-    console.log('unswitch2panel' + unswitch2panel);
+    this.router.navigate(['map/floor2']);
   }
 }
     } else {

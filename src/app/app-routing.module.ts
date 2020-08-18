@@ -22,6 +22,11 @@ const routes: Routes = [
   },
   {
     path: 'map',
+    redirectTo: 'map/floor0',
+    pathMatch: 'full'
+  },
+  {
+    path: 'map',
   component: MapPageComponent,
   children: [
     {path: 'floor0', component: Floor0Component},
