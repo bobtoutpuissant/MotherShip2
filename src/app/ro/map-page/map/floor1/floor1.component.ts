@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import * as $ from 'jquery';
+import { ClickMap } from 'src/assets/ts/FunctClickMap';
+import { RoomActivator } from 'src/assets/ts/FunctRoomActivator';
 import { GetCardInfoService } from 'src/services/get-card-info.service';
 import {SearchService} from 'src/services/search.service';
 import {SearchPipe} from 'src/app/search.pipe';
@@ -10,6 +11,9 @@ import {SearchPipe} from 'src/app/search.pipe';
   styleUrls: ['../map.component.scss']
 })
 export class Floor1Component implements OnInit {
+
+  roomActivator = RoomActivator;
+  clickMap = ClickMap;
 
   constructor(
     private card: GetCardInfoService,
@@ -24,31 +28,8 @@ export class Floor1Component implements OnInit {
       }
     }
 
-    clickMap(event: any): void {
-      console.log(event + 'ce que recois clickmap');
-      const idAttr = event.target.id;
-      this.roomActivator(idAttr);
-    }
-
-    roomActivator(idAttr: any): void{
-      if (idAttr !== 'W0' && idAttr !== 'W1' && idAttr !== 'W2') {
-        this.searchService.mainSearchBar = idAttr;
-        $('input[name=\'room\']').trigger('click');
-        console.log('que ça marche!');
-        document.getElementById('mainSearchBar').focus();
-        this.highlightManager(idAttr);
-      } else {
-        console.log('il ny as rien');
-      }
-    }
-
-    highlightManager(idAttr: any): void {
-      const mapItems = document.querySelectorAll('mapItem');
-      [].forEach.call(mapItems, function(e: any): void {
-        e.ClassName = e.ClassName.remove('highlightMap');
-      });
-      const roomIwantToBeFkngLightedUp = document.getElementById(idAttr);
-      roomIwantToBeFkngLightedUp.classList.add('highlightMap');
+    clicked(event: any): void{
+      this.clickMap(event);
     }
 
 }
