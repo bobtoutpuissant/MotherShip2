@@ -15,8 +15,6 @@ body {
 body {
     margin: 0;
     font-family: Roboto, "Helvetica Neue", sans-serif;
-    overflow-y: hidden;
-    overflow-x: hidden;
 }
 
 svg {
@@ -116,15 +114,12 @@ ol {
 }
 
 .scrollboxList {
-    overflow: auto;
     max-width: 500px;
     max-height: calc(100vh - 66px);
     margin: 0px;
 }
 
 .scrollboxMap {
-    overflow-y: auto;
-    overflow-x: hidden;
     max-height: 90vh;
     margin: 0px;
 }

@@ -4,10 +4,9 @@ import { SearchService } from 'src/services/search.service';
 declare let $;
 
 @Component({
-  selector: 'app-floor-base',
-  templateUrl: './floor-base.component.html',
-  styleUrls: ['./floor-base.component.scss']
+  template: ''
 })
+
 export class FloorBaseComponent implements OnInit {
 
   constructor(
