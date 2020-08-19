@@ -21,7 +21,6 @@ export class FloorBaseComponent implements OnInit {
   }
 
   clickMap(event: any): void {
-    console.log(event + 'ce que recois clickmap');
     const idAttr = event.target.id;
     this.roomActivator(idAttr);
   }
@@ -30,12 +29,9 @@ export class FloorBaseComponent implements OnInit {
     if (idAttr !== 'W0' && idAttr !== 'W1' && idAttr !== 'W2') {
       this.searchService.mainSearchBar = idAttr;
       $('input[name=\'room\']').trigger('click');
-      console.log('que ça marche!');
       document.getElementById('mainSearchBar').focus();
       this.highlightManager(idAttr);
-    } else {
-      console.log('il ny as rien');
-    }
+    } else {}
   }
 
   highlightManager(idAttr: any): void {

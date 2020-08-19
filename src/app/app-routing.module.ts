@@ -12,12 +12,12 @@ import { Floor2Component } from './ro/map-page/map/floor2/floor2.component';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'home/page1',
+    redirectTo: 'home',
     pathMatch: 'full'
   },
   {
     path: 'home',
-    redirectTo: 'home/page1',
+    redirectTo: 'home',
     pathMatch: 'full'
   },
   {
@@ -37,10 +37,6 @@ const routes: Routes = [
   {
     path: 'home',
   component: LinkPageComponent,
-  children: [
-    {path: 'page1', component: Page1Component },
-    {path: 'page2', component: Page2Component }
-  ]
 },
 ];
 

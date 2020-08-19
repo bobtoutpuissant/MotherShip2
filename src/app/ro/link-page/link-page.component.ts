@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { LINKLIST } from 'src/assets/data/linkList';
 
 @Component({
@@ -8,11 +8,17 @@ import { LINKLIST } from 'src/assets/data/linkList';
 })
 export class LinkPageComponent implements OnInit {
 
+  @Input()
+  page;
+  pageSize;
+  collectionSize;
+
   linkList = LINKLIST;
 
   constructor() { }
 
   ngOnInit(): void {
-  }
+    this.page = 1;
+    }
 
 }

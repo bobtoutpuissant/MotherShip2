@@ -1,5 +1,5 @@
 <div class="row scrollboxList">
-    <div class="col-12">
+    <div class="col-12 scrollboxListInside">
         <div class="spacer-20"></div>
         <app-people-card [people]="people" *ngFor='let people of peopleList | search: searchService.mainSearchBar'></app-people-card>
     </div>
