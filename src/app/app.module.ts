@@ -32,6 +32,7 @@ import { Floor2Component } from './ro/map-page/map/floor2/floor2.component';
 import { Floor1Component } from './ro/map-page/map/floor1/floor1.component';
 import { Floor0Component } from './ro/map-page/map/floor0/floor0.component';
 import { FloorBaseComponent } from './ro/map-page/map/floor-base/floor-base.component';
+import { LinkCardComponent } from './ro/link-page/link-card/link-card.component';
 
 @NgModule({
   declarations: [
@@ -49,6 +50,7 @@ import { FloorBaseComponent } from './ro/map-page/map/floor-base/floor-base.comp
     Floor1Component,
     Floor0Component,
     FloorBaseComponent,
+    LinkCardComponent,
   ],
   imports: [
     BrowserModule,

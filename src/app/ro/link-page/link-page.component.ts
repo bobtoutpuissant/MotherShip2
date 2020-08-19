@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {  } from 'src/assets/data/linkList';
+import { LINKLIST } from 'src/assets/data/linkList';
 
 @Component({
   selector: 'app-link-page',
@@ -8,7 +8,7 @@ import {  } from 'src/assets/data/linkList';
 })
 export class LinkPageComponent implements OnInit {
 
-  linkList = [];
+  linkList = LINKLIST;
 
   constructor() { }
 
