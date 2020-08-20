@@ -1,12 +1,12 @@
 <div class="mainStuff">
     <div class="container">
         <div class="row justify-content-center">
-            <app-link-card [linkCard]="linkCard" *ngFor="let linkCard of linkList  | slice: ((page - 1) * 16) : (page * 16)" class="col-md-3 col-sm-6"></app-link-card>
+            <app-link-card [linkCard]="linkCard" *ngFor="let linkCard of linkList  | slice: ((page - 1) * pageSize) : (page * pageSize)" class="col-md-3 col-sm-6"></app-link-card>
         </div>
     </div>
     <nav aria-label="Page navigation">
         <div class="pagination justify-content-center">
-            <ngb-pagination [(page)]="page" [pageSize]="16" [collectionSize]="linkList.length"></ngb-pagination>
+            <ngb-pagination [(page)]="page" [pageSize]="pageSize" [collectionSize]="linkList.length"></ngb-pagination>
         </div>
     </nav>
     <div class="spacerPagination"></div>

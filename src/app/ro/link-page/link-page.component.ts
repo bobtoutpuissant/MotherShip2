@@ -19,6 +19,7 @@ export class LinkPageComponent implements OnInit {
 
   ngOnInit(): void {
     this.page = 1;
+    this.pageSize = 12;
     }
 
 }
