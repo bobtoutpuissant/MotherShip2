@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { Routes, RouterModule, ActivationEnd } from '@angular/router';
 import { MapPageComponent } from './ro/map-page/map-page.component';
 import { LinkPageComponent } from './ro/link-page/link-page.component';
 import { Floor0Component } from './ro/map-page/map/floor0/floor0.component';
 import { Floor1Component } from './ro/map-page/map/floor1/floor1.component';
 import { Floor2Component } from './ro/map-page/map/floor2/floor2.component';
 
-
+let lastFloor = 'map/floor0';
 const routes: Routes = [
   {
     path: '',
@@ -20,7 +20,7 @@ const routes: Routes = [
   },
   {
     path: 'map',
-    redirectTo: 'map/floor0',
+    redirectTo: lastFloor,
     pathMatch: 'full'
   },
   {
@@ -42,4 +42,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

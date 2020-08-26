@@ -1,3 +1,5 @@
+import { endWith } from 'rxjs/operators';
+
 export interface People {
   name: string;
   role: string;
