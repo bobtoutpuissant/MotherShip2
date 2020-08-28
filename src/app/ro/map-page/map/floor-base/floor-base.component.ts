@@ -23,6 +23,7 @@ export class FloorBaseComponent implements OnInit {
   clickMap(event: any): void {
     const idAttr = event.target.id;
     this.roomActivator(idAttr);
+    console.log('floor-base.component');
   }
 
   roomActivator(idAttr: any): void{
